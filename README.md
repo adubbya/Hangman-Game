@@ -37,20 +37,24 @@ CHALLENGE ACCEPTED
 
 ~~3. Use key events to listen for the letters that your players will type.~~
 
-4. Display the following on the page:
+~~4. Display the following on the page:~~
 
-5. Press any key to get started!
+~~5. Press any key to get started!~~
 
-6. Wins: (# of times user guessed the word correctly).
+~~6. Wins: (# of times user guessed the word correctly).
 
-   * If the word is `madonna`, display it like this when the game starts: `_ _ _ _ _ _ _`.
+   ~~* If the word is `madonna`, display it like this when the game starts: `_ _ _ _ _ _ _`.~~
 
-   * As the user guesses the correct letters, reveal them: `m a d o _  _ a`.
+  ~~ * As the user guesses the correct letters, reveal them: `m a d o _  _ a`.~~
 
+counter in docup
 7. Number of Guesses Remaining: (# of guesses remaining for the user).
 
+
+array for docup
 8. Letters Already Guessed: (Letters the user has guessed, displayed like `L Z Y H`).
 
+hmm, dont forget to countup wins
 9. After the user wins/loses the game should automatically choose another word and make the user play it.
 
 ##### Hangman Game Bonuses
