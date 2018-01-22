@@ -28,7 +28,7 @@
         //document.querySelector("#start").innerHTML = html;   <==wanted to hide "press any key" after game begins, ohwell.
 
         // Display winsNum value on html page at #wins ID
-        document.querySelector("#wins").innerHTML = winsNum;
+        // document.querySelector("#wins").innerHTML = winsNum;
         // display "_" for each char of word
         document.querySelector("#guessWord").innerHTML = blanksArr.join(" ");
         console.log(document.querySelector("#guessRemain"))
