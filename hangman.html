@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:900" rel="stylesheet">
+    <script type="text/javascript" href="assets/javascript/game.js"></script>
 </head>
 
 <body>
@@ -23,119 +24,13 @@
             <p>Current Word</p>
             <p id="guessWord"></p>
         </div>
-
-        <!-- Display the following on the page: -->
-        <!-- Press any key to get started! -->
-        <!-- <div class=container>
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <img src="assets/images/monty.png" alt="Holy Grail">   
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12"> 
-                    <div style="font-family:"Cinzel Decorative", cursive;">The Quest for the Holy Hangman Game</div>
-                </div>
-            </div>    
-            <div class="row">
-                <div class="col-md-3">
-                    &nbsp;
-                </div>
-                <div class="col-md-3">
-                    <img src="assets/images/monster.jpg">
-                </div>
-        this col will display game data and interact with js using id hang
-                <div class="col-md-3" id="hang">
-                    <p>"Press any key to play now!"</p>
-                    <p>WINS</p>
-                    <p>Current Word</p>
-                </div>
-                <div class="col-md-3">
-                     &nbsp;
-                </div>
-            </div>
-        </div> -->
-
-        <!-- Wins: (# of times guessChar guessed the word correctly). -->
-
-        <!-- If the word is madonna, display it like this when the game starts: _ _ _ _ _ _ _. -->
-
-
-        <!-- As the guessChar guesses the correct letters, reveal them: m a d o _ _ a. -->
-
-
-        <!-- Number of Guesses Remaining: (# of guesses remaining for the guessChar). -->
-
-
-        <!-- Letters Already Guessed: (Letters the guessChar has guessed, displayed like L Z Y H). -->
-
-
-        <!-- After the guessChar wins/loses the game should automatically choose another word and make the guessChar play it. -->
-
-        <!--js create variable for words, wins, # of guesses, letters guessed -->
-        <script type="text/javascript">
-
-            // VARIABLES
-            // +++++++++++++++++++++++++++++++++++++++++
-            // Words array
-            var winsNum = 0;
-            //holy words 
-            var words = ["camelot", "swamp", "grail", "witch", "shrubbery", "herring", "moose", "holy", "grenade"];
-            //var alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-            // random word selector
-            var wordSel = words[Math.floor(Math.random() * words.length)];
-            //test var wordSel = "test";
-            var blanksArr = [];
-            // wordSel split array
-            var wordSelArr = wordSel.split("");
-            console.log(wordSel); // yay random word selector
-
-            // FUNCTIONS
-            // ===========================================================================
-
-            console.log("more info: ", wordSelArr.length)
-            //for loop to replace guessword array with blanks on html page
-            for (var i = 0; i < wordSelArr.length; i++) {
-                blanksArr[i] = "_";
-            }
-            console.log(blanksArr); //dev
-
-            // MAIN PROCESS
-            // ==============================================================================
-
-            // Calling functions to start the game.
-
-            //guessChar input
-            document.onkeyup = function (event) {
-                // assign onkeyup event to guessChar var, force input to lowercase    
-                var guessChar = event.key.toLowerCase();
-
-                //if user"s input matches character in word, replace "_" with chosen charachter
-                //if guessChar === wordSelArr.forEach {
-                wordSelArr.forEach(function (val, index, array) {
-                    if (guessChar === val) {
-                        console.log(val);
-                        blanksArr[index]=val;
-                        console.log(blanksArr);
-                        document.querySelector("#guessWord").innerHTML = blanksArr.join(" ");
-                    }
-
-                });
-                //test guessChar input, verified
-                //console.log(guessChar); //yay guessChar input locase only
-
-            }
-
-
-            //}
-
-            // Set the inner HTML contents of the #game div to html string
-            //document.querySelector("#start").innerHTML = html;
-            document.querySelector("#wins").innerHTML = winsNum;
-            // display hidden word characters
-            document.querySelector("#guessWord").innerHTML = blanksArr.join(" ");
-            
-        </script>
-</body>
-
+        <div>
+            <p>Number of Guesses Remaining</p>
+            <p id="guessRemain"></p>
+        </div>
+        <div>
+            <p>Correct Guesses</p>
+            <p id="guessTrue"></p>
+        </div>
+    </div>
 </html>
